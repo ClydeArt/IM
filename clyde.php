@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="Rform.css">
 </head>
 
@@ -56,6 +56,7 @@
                     .then(function(response) {
                         if (response.data && response.data.ret == 1) {
                             alert("User saved!");
+                            window.location.href = "/"
                         } else {
                             alert("Error: " + (response.data.msg || "Unknown error"));
                         }
